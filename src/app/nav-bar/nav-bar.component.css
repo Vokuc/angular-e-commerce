@@ -1,0 +1,13 @@
+nav {
+    background-color: blue;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    list-style: none;
+}
