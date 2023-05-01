@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+  initialValue: number = 0;
+  
   navbar: string[] = [
     "Home", "Contact", "About", "Blog", "Event"
   ]
