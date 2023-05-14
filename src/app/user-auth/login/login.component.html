@@ -1,2 +1,7 @@
 <p>login works!</p>
-<button (click)="login('Chika')">Click to login</button>
+<button *ngIf="male else altClick" (click)="login('Chika')">Click to login</button>
+<input type="text" value="Add name" disabled={{male}}>
+<input type="text" value="Add YOur name" [disabled]="male">
+<ng-template #altClick>
+    <button>ALT CLICK</button>
+</ng-template>

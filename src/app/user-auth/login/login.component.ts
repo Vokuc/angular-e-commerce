@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   login(name: string) {
       alert(`You are now logged in as ${name}`)
-    }
+  }
+  
+  age = 32;
+  male = false;
 }
