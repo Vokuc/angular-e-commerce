@@ -10,6 +10,34 @@ export class LoginComponent {
       alert(`You are now logged in as ${name}`)
   }
   
-  age = 32;
+
   male = false;
+  firstTimer = "yes";
+  name = ""
+  names = ['Chika', 'Rosy', 'Ify']
+  details = [
+    {
+      aha: 'Chika', 
+      age: 25,
+      hobbies: ['Reading', 'Football',]
+    },
+    {
+      aha: 'Rosy', 
+      age: 24,
+      hobbies: ['Singing', 'Working',]
+    },
+    {
+      aha: 'Ify', 
+      age: 22,
+      hobbies: ['Reading', 'Dancing',]
+    }
+  ]
+
+  color = "green"
+  colors = ["red", "green", "blue", "yellow"]
+  selectedColor= this.colors[0]
+  updateColor() {
+    let random = Math.floor(Math.random() * this.colors.length)
+    this.selectedColor = this.colors[random]
+  }
 }

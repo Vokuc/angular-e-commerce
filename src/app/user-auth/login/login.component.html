@@ -1,7 +1,21 @@
 <p>login works!</p>
-<button *ngIf="male else altClick" (click)="login('Chika')">Click to login</button>
-<input type="text" value="Add name" disabled={{male}}>
-<input type="text" value="Add YOur name" [disabled]="male">
+<button (click)="male=!male">CLICK TO CHANGE</button>
+<button *ngIf="male then firstTime else altClick">Click to login</button>
 <ng-template #altClick>
-    <button>ALT CLICK</button>
+    <h1>He's not a first timer</h1>
 </ng-template>
+<ng-template #firstTime>
+    <h1>He's a first timer</h1>
+</ng-template>
+<div [ngSwitch]="name">
+    <h1 *ngSwitchCase="'Chika'">Chika</h1>
+    <h1 *ngSwitchCase="'Rosy'">Rosy</h1>
+    <h1 *ngSwitchCase="'Ify'">Ify</h1>
+    <h1 *ngSwitchCase="'Miracle'">Miracle</h1>
+    <h1 *ngSwitchCase="'Chimazuru'">Chimazuru</h1>
+    <h1 *ngSwitchDefault>Ukpai</h1>
+</div>
+
+<p *ngFor="let aha of names">My name is {{aha}}</p>
+<p *ngFor="let aha of details" [style.color]="selectedColor">I am {{aha.aha}}, I am {{aha.age}} years old. I love <span *ngFor="let hobby of aha.hobbies">{{hobby}}, </span></p>
+<button (click)="updateColor()">CHANGE COLOR</button>
